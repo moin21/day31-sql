@@ -1,0 +1,47 @@
+UC1:
+
+mysql> create database AddressBookService;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbookdb      |
+| addressbookservice |
+| adressbookdb       |
+| alpha              |
+| information_schema |
+| mysql              |
+| payroll_service    |
+| performance_schema |
+| sys                |
++--------------------+
+9 rows in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UC2:
+
+mysql> CREATE TABLE Contact(FirstName varchar(30), LastName varchar(30), Address varchar(50), City varchar(50), Zip int, PhoneNumber int, Email varchar(50));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> desc Contact;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| FirstName   | varchar(30) | YES  |     | NULL    |       |
+| LastName    | varchar(30) | YES  |     | NULL    |       |
+| Address     | varchar(50) | YES  |     | NULL    |       |
+| City        | varchar(50) | YES  |     | NULL    |       |
+| Zip         | int         | YES  |     | NULL    |       |
+| PhoneNumber | int         | YES  |     | NULL    |       |
+| Email       | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+7 rows in set (0.02 sec)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+UC3:
+
+mysql> INSERT INTO Contact VALUES("Moinuddin", "Asraf", "Mansarovar", "Jaipur", 123456, 123123, "moin@gmail.com");
+Query OK, 1 row affected (0.02 sec)
